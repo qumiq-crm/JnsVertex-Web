@@ -2,94 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
-    font-family: 'monument';
-    src: url('./assets/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf');
+  font-family: "monument";
+  src: url("./assets/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf");
 }
 
 .font-monument {
-    font-family: 'monument';
+  font-family: "monument";
 }
 
-.from-founders{
-    position: relative;
-    width: 90%;
-    height: 50vh;
+.from-founders {
+  position: relative;
+  width: 90%;
+  height: 50vh;
 }
 
-.from-founders img{
+.from-founders img {
   height: 50vh;
   border-radius: 30px;
   z-index: 2;
 }
 
-.from-founders > div{
+.from-founders > div {
+  border-radius: 0px 30px 30px 0;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  z-index: 0;
+  height: calc(50vh - 60px);
+  margin-top: 30px;
+}
+
+.from-founders > div > h1 {
+  font-size: 30px;
+  background-image: linear-gradient(to left top, #d2e8e6, #d2e8e6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  transform: translateY(-50%);
+}
+.from-founders > div > p {
+  padding: 10px;
+  margin-top: 35px;
+}
+
+.from-founders.flex-row-reverse img {
+  border-radius: 30px;
+}
+
+.from-founders.flex-row-reverse > div {
+  border-radius: 30px 0 0 30px;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  border-right: none;
+}
+
+.from-founders.flex-row-reverse > div > h1 {
+  right: 0;
+  left: auto;
+}
+
+.colors-important {
+  background-image: url("./assets/tools-art-repairing-paint-top-view.png");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.more-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000007e;
+  height: 50vh;
+  border-radius: 30px;
+  width: 100%;
+}
+.more-info > img {
+  height: 50vh;
+  border-radius: 30px;
+}
+.more-info > div > button {
+  background-color: #0d9890;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bolder;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .from-founders {
+    position: relative;
+    width: 90%;
+    height: 25vh;
+  }
+
+  .from-founders img {
+    height: 25vh;
+    border-radius: 30px;
+    z-index: 2;
+  }
+
+  .from-founders > div {
     border-radius: 0px 30px 30px 0;
     border-bottom: 1px solid #000000;
     border-right: 1px solid #000000;
     border-top: 1px solid #000000;
     z-index: 0;
-    height: calc(50vh - 60px);
+    height: calc(25vh - 60px);
     margin-top: 30px;
-}
+  }
 
-.from-founders > div > h1{
-    font-size: 30px;
+  .from-founders > div > h1 {
+    font-size: 20px;
     background-image: linear-gradient(to left top, #d2e8e6, #d2e8e6);
     position: absolute;
     top: 0;
     left: 0;
     padding: 10px;
     transform: translateY(-50%);
-}
-.from-founders > div > p{
-     padding: 10px;
-     margin-top: 35px;
-}
+  }
+  .from-founders > div > p {
+    padding: 10px;
+    margin-top: 35px;
+    font-size: 10px;
+  }
 
-.from-founders.flex-row-reverse img {
+  .from-founders.flex-row-reverse img {
     border-radius: 30px;
-}
+  }
 
-.from-founders.flex-row-reverse > div {
+  .from-founders.flex-row-reverse > div {
     border-radius: 30px 0 0 30px;
     border-bottom: 1px solid #000000;
     border-left: 1px solid #000000;
     border-top: 1px solid #000000;
     border-right: none;
-}
+  }
 
-.from-founders.flex-row-reverse > div > h1 {
+  .from-founders.flex-row-reverse > div > h1 {
     right: 0;
     left: auto;
-}
-.colors-important{
-    background-image:url("./assets/tools-art-repairing-paint-top-view.png");
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    width: 100%;
-    margin-top: 50px;
-}
+  }
 
-.more-info{
+  .more-info {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #0000007e;
-    height: 50vh;
+    height: 25vh;
     border-radius: 30px;
     width: 100%;
-}
-.more-info > img{
-    height: 50vh;
+  }
+  .more-info > img {
+    height: 25vh;
     border-radius: 30px;
-}
-.more-info > div>button{
-    background-color: #0D9890;
+  }
+  .more-info > div > button {
+    background-color: #0d9890;
     color: #000000;
     padding: 10px 20px;
     border-radius: 20px;
     font-weight: bolder;
-    margin-top: 40px;
+    margin-top: 20px;
+  }
+
+  .colors-important {
+    background-image: url("./assets/tools-art-repairing-paint-top-view.png");
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    width: 100%;
+    margin-top: 50px;
+  }
 }

@@ -46,8 +46,34 @@ function workdoneCarousel() {
   
     // Helper function to update slide positions and styles
     const updateSlides = () => {
-      for (let i = 0; i < totalSlides; i++) {
-        if (i === currentSlide) {
+      const width = window.innerWidth;
+      console.log(width);
+      if (width< 768) {
+
+        for (let i = 0; i < totalSlides; i++) {
+          if (i === currentSlide) {
+          slides[i].style.left = "50%";
+          slides[i].style.width = "55%";
+          slides[i].style.zIndex = "3"; // Higher z-index for the active slide
+        } else if (i === (currentSlide + 1) % totalSlides) {
+          slides[i].style.left = "100%";
+          slides[i].style.width = "40%";
+          slides[i].style.zIndex = "2"; // Middle z-index for the next slide
+        } else if (i === (currentSlide + totalSlides - 1) % totalSlides) {
+          slides[i].style.left = "0%";
+          slides[i].style.width = "40%";
+          slides[i].style.zIndex = "2"; // Middle z-index for the previous slide
+        } else {
+          slides[i].style.left = "-100%";
+          slides[i].style.width = "40%";
+          slides[i].style.zIndex = "1"; // Lowest z-index for hidden slides
+        }
+      }
+
+      }else{
+
+        for (let i = 0; i < totalSlides; i++) {
+          if (i === currentSlide) {
           slides[i].style.left = "50%";
           slides[i].style.width = "45%";
           slides[i].style.zIndex = "3"; // Higher z-index for the active slide
@@ -65,6 +91,7 @@ function workdoneCarousel() {
           slides[i].style.zIndex = "1"; // Lowest z-index for hidden slides
         }
       }
+    }
     };
   
     // Initial setup
