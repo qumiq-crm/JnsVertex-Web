@@ -103,11 +103,12 @@ html {
   .from-founders {
     position: relative;
     width: 90%;
-    height: 25vh;
+    height: 20vh;
+    display: none;
   }
 
   .from-founders img {
-    height: 25vh;
+    height: 20vh;
     border-radius: 30px;
     z-index: 2;
   }
@@ -156,31 +157,35 @@ html {
 
   .more-info {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: #0000007e;
-    height: 25vh;
+    height: 50vh;
     border-radius: 30px;
     width: 100%;
   }
   .more-info > img {
-    height: 25vh;
+    height: 30vh;
+    width: 100%;
     border-radius: 30px;
   }
   .more-info > div > button {
     background-color: #0d9890;
     color: #000000;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 20px;
     font-weight: bolder;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+    margin-bottom: 10px;
   }
 
   .colors-important {
     background-image: url("./assets/tools-art-repairing-paint-top-view.png");
     background-size: cover;
     background-position: center;
-    height: 30vh;
+    height: 50vh;
     width: 100%;
     margin-top: 50px;
   }
