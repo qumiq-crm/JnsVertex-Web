@@ -971,12 +971,12 @@ video {
   height: 50px;
 }
 
-.h-\[50vh\] {
-  height: 50vh;
-}
-
 .h-\[55px\] {
   height: 55px;
+}
+
+.h-\[55vh\] {
+  height: 55vh;
 }
 
 .h-\[70\%\] {
@@ -3105,7 +3105,7 @@ html {
     justify-content: space-between;
     align-items: center;
     background-color: #0000007e;
-    height: 50vh;
+    height: 55vh;
     border-radius: 30px;
     width: 100%;
   }
