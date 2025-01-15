@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JNS Vertex</title>
+  </head>
+  <body
+    style="
+      background-image: url('./assets/mainPageBg.png');
+      background-size: 100%;
+      background-position: top;
+    "
+  >
+    <div class="min-h-[100vh] w-[100%]">
+      <nav
+        class="bg-gradient-to-b from-[#23A19840] to-[#ffffff00] px-8 font-monument text-[14px] h-[55px] flex justify-between items-center"
+      >
+        <div>
+          <img src="./assets/logo.png" alt="JNS Vertex Logo" class="h-[50px]" />
+        </div>
+        <div>
+          <ul class="flex gap-10 text-[#094946]">
+            <li>Contact</li>
+            <li class="underline">Home</li>
+            <li>Product</li>
+            <li>About</li>
+          </ul>
+        </div>
+      </nav>
+
+      <div
+        class="flex justify-center items-center px-8 h-[calc(100vh-55px)] w-[100%] relative"
+      >
+        <!-- Carousel container -->
+        <div
+          id="carousel"
+          class="relative h-[90%] w-full rounded-xl overflow-hidden"
+        >
+          <!-- Carousel slides -->
+          <div
+            class="carousel-slide absolute w-full h-full bottom-0 transition-transform duration-500"
+            style="
+              background-image: url('./assets/CarouselImage1.png');
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            <img
+              src="./assets/portrait-posing-smiling-young-man.png"
+              alt="JNS Vertex Logo"
+              class="h-[90%] absolute bottom-0 left-[1%]"
+            />
+            <div class="mt-[5%] uppercase text-center">
+              <h1 class="text-[#ffffff] font-monument text-[40px] font-bold">
+                <span class="text-[#0B6D66]">Painting</span> Wonders
+              </h1>
+              <h1 class="text-[#ffffff] font-monument text-[48px] font-bold">
+                Creating <span class="text-[#0B6D66]">Smiles</span>
+              </h1>
+            </div>
+            <img
+              src="./assets/yellowpaint.png"
+              class="absolute bottom-[50%] translate-y-[50%] right-[30px] h-[70%]"
+            />
+          </div>
+          <!-- Add more slides with the same structure -->
+
+          <div
+            class="carousel-slide absolute w-full bottom-0 h-full transition-transform duration-500"
+            style="
+              background-image: url('./assets/retro-living-room-interior-design.png');
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            <img
+              src="./assets/young-man-green-shirt-wearing-glasses-looking-front-confused-pointing-with-thumb-side-standing-orange-wall 1.png"
+              alt="JNS Vertex Logo"
+              class="h-[90%] absolute bottom-0 left-[1%]"
+            />
+            <div class="mt-[5%] uppercase text-center">
+              <h1 class="text-[#ffffff] font-monument text-[40px] font-bold">
+                say <span class="text-[#31BCB4]">goodbye</span> to
+              </h1>
+              <h1 class="text-[#ffffff] font-monument text-[48px] font-bold">
+                boring walls
+              </h1>
+            </div>
+            <img
+              src="./assets/bluepaint.png"
+              class="absolute bottom-[50%] translate-y-[50%] right-[30px] h-[70%]"
+            />
+          </div>
+
+          <div
+            class="carousel-slide absolute w-full h-full bottom-0 transition-transform duration-500"
+            style="
+              background-image: url('./assets/blue-wall-with-red-sofa.png');
+              background-size: cover;
+              background-position: bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            <img
+              src="./assets/handsome-man-pointing-finger-left.png"
+              alt="JNS Vertex Logo"
+              class="h-[90%] absolute bottom-0 left-[1%]"
+            />
+            <div class="mt-[5%] uppercase text-center">
+              <h1 class="text-[#ffffff] font-monument text-[40px] font-bold">
+                Where <span class="text-[#184441]">Quality</span>
+              </h1>
+              <h1 class="text-[#ffffff] font-monument text-[48px] font-bold">
+                Meets <span class="text-[#184441]">Creativity</span>
+              </h1>
+            </div>
+            <img
+              src="./assets/blackpaint.png"
+              class="absolute bottom-[50%] translate-y-[50%] right-[30px] h-[70%]"
+            />
+          </div>
+          <!-- Navigation buttons -->
+          <button
+            class="carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 rounded-full p-2 hover:bg-white/75"
+          >
+            ←
+          </button>
+          <button
+            class="carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 rounded-full p-2 hover:bg-white/75"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-9">
+        <div class="font-monument py-3 flex flex-col justify-center items-center px-9" style="background-image: url('./assets/dark-green-marble-wave-background.png'); background-size: cover; background-position: top; background-repeat: no-repeat;">
+            <h1 class="text-[#000000] font-monument text-[30px] font-bold text-center uppercase">enhance  your  walls</h1>
+            <div class="grid grid-cols-3 gap-5 items-center mt-4">
+                <div class="w-[90%]  aspect-video">
+                    <img src="./assets/Screenshot 2025-01-06 192106.png" class="rounded-xl h-[70vh]" alt="" srcset="">
+                    <h1 class="text-[#000000] font-monument text-[20px] font-bold text-center uppercase mt-2">Hide Imperfections</h1>
+                </div>
+                <div class="w-[90%]  aspect-video">
+                    <img src="./assets/Screenshot 2025-01-06 192755.png" class="rounded-xl h-[70vh]" alt="" srcset="">
+                    <h1 class="text-[#000000] font-monument text-[20px] font-bold text-center uppercase mt-2">Versatile Styles</h1>
+                </div>
+                <div class="w-[90%]  aspect-video">
+                    <img src="./assets/Screenshot 2025-01-06 192909.png" class="rounded-xl h-[70vh]" alt="" srcset="">
+                    <h1 class="text-[#000000] font-monument text-[20px] font-bold text-center uppercase mt-2">Hide Imperfections</h1>
+                </div>
+               
+            </div>
+        </div>
+        <div class="flex justify-center items-center w-full mt-20">
+            <div class="relative from-founders flex flex-row-reverse">
+                <img src="./assets/Screenshot 2025-01-07 224902.png" alt="" >
+                <div class="relative">
+                    <h1 class="text-[#000000] font-monument text-[30px] font-bold uppercase">Our Mission</h1>
+                    <p class="text-[#000000] font-monument text-[16px] uppercase mt-2">We strive to deliver exceptional painting solutions that not only beautify spaces but also create lasting impressions. Our commitment to quality, innovation, and customer satisfaction drives us to provide premium products and services that exceed expectations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <div class="colors-important">
+            <div class="flex flex-col justify-center items-center h-full w-full bg-[#0000006d] px-20">
+                <h1 class="text-[#ffffff] font-monument text-[30px] font-bold uppercase">Why Colors are Important</h1>
+                <p class="text-[#ffffff] font-monument text-[16px] mt-5">Colors play a crucial role in creating a harmonious and visually appealing environment. They can evoke emotions, set the mood, and even influence our behavior. At JNS Vertex, we understand the power of color and how it can transform spaces. Our expert team of painters is dedicated to helping you find the perfect color palette for your home or business, ensuring that your walls not only look beautiful but also feel welcoming and inspiring.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center w-full mt-20">
+
+        <div style="background-image: url('./assets/2202_w015_n001_746b_p15_746.png'); background-size: cover; background-position: center; background-repeat: no-repeat;" class="h-[50vh] w-[80%] rounded-[30px]">
+            <div class="more-info">
+
+                <img src="./assets/service-maintenance-worker-repairing.png" alt="">
+                <div class="flex flex-col justify-center items-center px-8">
+                    <h1 class=" font-monument text-[30px] text-center text-white font-bold uppercase">FOR MORE INFORMATION</h1>
+                    <p class="text-white font-monument text-[16px] mt-2 text-center">Contact us today to learn more about our services and how we can help you enhance your walls with our premium painting solutions.</p>
+                    <button>Download Brochure</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#246560] w-full h-[50vh] relative overflow-hidden mt-24">
+        <img
+          src="./assets/WhatsApp Image 2025-01-07 at 3.37.37 PM.png"
+          style="width: 30%;"
+          class="absolute top-[50%] left-0 translate-y-[-50%] translate-x-[-50%] transition-all duration-300 rounded-2xl workdone-c"
+          alt=""
+        />
+        <img
+          src="./assets/WhatsApp Image 2025-01-07 at 3.37.34 PM (1).png"
+          style="width: 45%;"
+          class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] transition-all duration-300 rounded-2xl workdone-c"
+          alt=""
+        />
+        <img
+          src="./assets/WhatsApp Image 2025-01-07 at 3.37.37 PM (1).png"
+          alt=""
+          style="width: 30%;"
+          class="absolute top-[50%] left-[100%] translate-x-[-50%] translate-y-[-50%] transition-all duration-300 rounded-2xl workdone-c"
+        />
+      </div>
+      
+
+    <script src="./script.js"></script>
+  </body>
+</html>
