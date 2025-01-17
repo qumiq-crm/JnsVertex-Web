@@ -2413,6 +2413,14 @@ video {
   line-height: 1.25rem;
 }
 
+.text-\[255px\] {
+  font-size: 255px;
+}
+
+.text-\[25px\] {
+  font-size: 25px;
+}
+
 .font-bold {
   font-weight: 700;
 }
