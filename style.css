@@ -190,3 +190,26 @@ html {
     margin-top: 50px;
   }
 }
+
+.modal-open {
+  overflow: hidden;
+}
+
+#productModal {
+  backdrop-filter: blur(5px);
+}
+
+#productModal img {
+  transition: transform 0.3s ease;
+}
+
+#productModal img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  #productModal .max-w-4xl {
+    width: 95%;
+    margin: 20px;
+  }
+}

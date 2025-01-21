@@ -1,11 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Products - JNS Vertex</title>
+  </head>
+  <body style="background-image: url('./assets/mainPageBg.jpg'); background-size: 100%; background-position: top;">
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-b from-[#23A19840] to-[#ffffff00] px-8 font-monument text-[14px] h-[55px] flex justify-between items-center">
+      <div>
+        <img src="./assets/logo.png" alt="JNS Vertex Logo" class="h-[50px]" />
+      </div>
+      <div class="relative">
+        <button id="menuBtn" class="md:hidden text-[#094946]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <ul class="hidden md:flex gap-10 text-[#094946]">
+          <a href="./index.html#contact">Contact</a>
+          <a href="./index.html">Home</a>
+          <a class="underline" href="./products.html">Product</a>
+        </ul>
+        <!-- Mobile menu -->
+        <ul id="mobileMenu" class="hidden z-[999] absolute right-0 top-[100%] bg-white p-4 rounded shadow-lg md:hidden flex-col gap-4 text-[#094946] min-w-[150px]">
+          <a href="./index.html#contact" class="block">Contact</a>
+          <a href="./index.html" class="block">Home</a>
+          <a class="underline block" href="./products.html">Product</a>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="w-full py-10 md:py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-[#000000] font-monument text-[30px] md:text-[48px] font-bold text-center uppercase">
+          Our <span class="text-[#0B6D66]">Products</span>
+        </h1>
+        <p class="text-center mt-4 max-w-2xl mx-auto text-gray-600">
+          Discover our premium range of painting solutions designed to transform your spaces
+        </p>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="container mx-auto px-4 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Interior Emulsion -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+          <img src="./Products/Interior/1.png" alt="Interior Emulsion" class="w-full h-64 object-cover"/>
+          <div class="p-6">
+            <h3 class="font-monument text-xl text-[#094946] mb-2">Interior Emulsion</h3>
+            <p class="text-gray-600 mb-4">Premium quality interior wall paint with excellent coverage and durability</p>
+            <button onclick="openModal('interior')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Exterior Emulsion -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+          <img src="./Products/Exterior/1.png" alt="Exterior Emulsion" class="w-full h-64 object-cover"/>
+          <div class="p-6">
+            <h3 class="font-monument text-xl text-[#094946] mb-2">Exterior Emulsion</h3>
+            <p class="text-gray-600 mb-4">Weather-resistant exterior paint for lasting protection</p>
+            <button onclick="openModal('exterior')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Distemper -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+          <img src="./Products/Distemper/1.png" alt="Distemper" class="w-full h-64 object-cover"/>
+          <div class="p-6">
+            <h3 class="font-monument text-xl text-[#094946] mb-2">Distemper</h3>
+            <p class="text-gray-600 mb-4">Economic wall coating with good coverage</p>
+            <button onclick="openModal('distemper')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Primer -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+          <img src="./Products/Primer/1.png" alt="Primer" class="w-full h-64 object-cover"/>
+          <div class="p-6">
+            <h3 class="font-monument text-xl text-[#094946] mb-2">Primer</h3>
+            <p class="text-gray-600 mb-4">Essential base coat for perfect paint finish</p>
+            <button onclick="openModal('primer')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Putty -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+          <img src="./Products/Putty/1.png" alt="Putty" class="w-full h-64 object-cover"/>
+          <div class="p-6">
+            <h3 class="font-monument text-xl text-[#094946] mb-2">Putty</h3>
+            <p class="text-gray-600 mb-4">Wall surface preparation for smooth finish</p>
+            <button onclick="openModal('putty')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Texture Paint -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
+          <img src="./Products/Texture/1.png" alt="Texture Paint" class="w-full h-64 object-cover"/>
+          <div class="p-6">
+            <h3 class="font-monument text-xl text-[#094946] mb-2">Texture Paint</h3>
+            <p class="text-gray-600 mb-4">Decorative textured finishes for unique walls</p>
+            <button onclick="openModal('texture')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white rounded-2xl p-6 max-w-4xl w-[90%] max-h-[90vh] overflow-y-auto relative">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        
+        <div id="modalContent" class="mt-4">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+
+        <!-- Image Gallery -->
+        <div id="imageGallery" class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+          <!-- Images will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="bg-[#184441] text-white py-16 mt-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-center font-monument text-3xl mb-12">Why Choose Our Products?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="bg-[#30706B] w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            </div>
+            <h3 class="font-monument text-xl mb-2">Premium Quality</h3>
+            <p class="text-gray-300">Superior formulation for excellent coverage and finish</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-[#30706B] w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"/>
+              </svg>
+            </div>
+            <h3 class="font-monument text-xl mb-2">Eco-Friendly</h3>
+            <p class="text-gray-300">Environmental-conscious formulations</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-[#30706B] w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <h3 class="font-monument text-xl mb-2">Certified</h3>
+            <p class="text-gray-300">Meeting international quality standards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#184441] text-white py-16">
+      <!-- ... (Same footer as index.html) ... -->
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+
+      // Product data
+      const products = {
+        interior: {
+          title: "Interior Emulsion",
+          description: "Our premium interior emulsion paint provides excellent coverage and a smooth finish. Perfect for interior walls and ceilings, offering superior washability and durability.",
+          features: [
+            "Excellent coverage and hiding power",
+            "Superior washability",
+            "Low VOC content",
+            "Anti-fungal properties",
+            "Available in multiple sheens",
+            "Long-lasting colors",
+            "Easy application"
+          ],
+          images: [
+            "./Products/Interior/1.png",
+            "./Products/Interior/2.png",
+            "./Products/Interior/3.png",
+            "./Products/Interior/4.png",
+            "./Products/Interior/5.png",
+            "./Products/Interior/6.png"
+          ]
+        },
+        exterior: {
+          title: "Exterior Emulsion",
+          description: "Weather-resistant exterior paint engineered to withstand harsh environmental conditions while maintaining its aesthetic appeal.",
+          features: [
+            "UV resistant formulation",
+            "Water-resistant properties",
+            "Anti-algal and anti-fungal protection",
+            "Excellent durability",
+            "Color-fast technology",
+            "Weather-shield protection",
+            "Crack-bridging ability"
+          ],
+          images: [
+            "./Products/Exterior/1.png",
+            "./Products/Exterior/2.png",
+            "./Products/Exterior/3.png",
+            "./Products/Exterior/4.png",
+            "./Products/Exterior/5.png"
+          ]
+        },
+        distemper: {
+          title: "Distemper",
+          description: "Economic wall coating solution that provides good coverage and a smooth matte finish, perfect for interior walls.",
+          features: [
+            "Cost-effective solution",
+            "Good coverage",
+            "Smooth matte finish",
+            "Easy application",
+            "Quick drying",
+            "Breathable coating"
+          ],
+          images: [
+            "./Products/Distemper/1.png",
+            "./Products/Distemper/2.png",
+            "./Products/Distemper/3.png",
+            "./Products/Distemper/4.png"
+          ]
+        },
+        primer: {
+          title: "Primer",
+          description: "Essential base coat that ensures better adhesion of paint and enhanced durability of the final finish.",
+          features: [
+            "Superior adhesion",
+            "Enhanced coverage",
+            "Seals porous surfaces",
+            "Provides uniform surface",
+            "Improves paint durability",
+            "Moisture resistant"
+          ],
+          images: [
+            "./Products/Primer/1.png",
+            "./Products/Primer/2.png",
+            "./Products/Primer/3.png",
+            "./Products/Primer/4.png"
+          ]
+        },
+        putty: {
+          title: "Wall Putty",
+          description: "High-quality wall putty that provides a smooth, strong base for paint application and ensures long-lasting finish.",
+          features: [
+            "Superior smoothness",
+            "Strong adhesion",
+            "Water resistant",
+            "Crack resistant",
+            "Extended durability",
+            "Easy application"
+          ],
+          images: [
+            "./Products/Putty/1.png",
+            "./Products/Putty/2.png",
+            "./Products/Putty/3.png",
+            "./Products/Putty/4.png"
+          ]
+        },
+        texture: {
+          title: "Texture Paint",
+          description: "Decorative textured finishes that add depth and character to your walls, creating unique and stunning visual effects.",
+          features: [
+            "Unique textured finish",
+            "Multiple design options",
+            "Hides surface imperfections",
+            "Durable coating",
+            "Water resistant",
+            "Easy maintenance"
+          ],
+          images: [
+            "./Products/Texture/1.png",
+            "./Products/Texture/2.png",
+            "./Products/Texture/3.png",
+            "./Products/Texture/4.png",
+            "./Products/Texture/5.png"
+          ]
+        }
+      };
+
+      function openModal(productId) {
+        const product = products[productId];
+        const modal = document.getElementById('productModal');
+        const content = document.getElementById('modalContent');
+        const gallery = document.getElementById('imageGallery');
+
+        // Generate content HTML
+        content.innerHTML = `
+          <h2 class="font-monument text-2xl text-[#094946] mb-4">${product.title}</h2>
+          <p class="text-gray-600 mb-4">${product.description}</p>
+          <ul class="list-disc pl-5 mb-4">
+            ${product.features.map(feature => `<li class="text-gray-600">${feature}</li>`).join('')}
+          </ul>
+        `;
+
+        // Generate gallery HTML
+        gallery.innerHTML = product.images.map(image => `
+          <div class="aspect-square overflow-hidden rounded-lg">
+            <img src="${image}" alt="${product.title}" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform"
+                 onclick="openFullImage('${image}')">
+          </div>
+        `).join('');
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('productModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      function openFullImage(imageSrc) {
+        // Implement full-screen image view if needed
+        window.open(imageSrc, '_blank');
+      }
+
+      // Close modal when clicking outside
+      document.getElementById('productModal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
 </html>
