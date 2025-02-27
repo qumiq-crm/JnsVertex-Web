@@ -46,97 +46,32 @@
     </div>
 
     <!-- Products Grid -->
-    <div class="container mx-auto px-4 py-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Interior Emulsion -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
-          <img src="./Products/Interior/1.png" alt="Interior Emulsion" class="w-full h-64 object-cover"/>
-          <div class="p-6">
-            <h3 class="font-monument text-xl text-[#094946] mb-2">Interior Emulsion</h3>
-            <p class="text-gray-600 mb-4">Premium quality interior wall paint with excellent coverage and durability</p>
-            <button onclick="openModal('interior')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
-              View Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Exterior Emulsion -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
-          <img src="./Products/Exterior/1.png" alt="Exterior Emulsion" class="w-full h-64 object-cover"/>
-          <div class="p-6">
-            <h3 class="font-monument text-xl text-[#094946] mb-2">Exterior Emulsion</h3>
-            <p class="text-gray-600 mb-4">Weather-resistant exterior paint for lasting protection</p>
-            <button onclick="openModal('exterior')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
-              View Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Distemper -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
-          <img src="./Products/Distemper/1.png" alt="Distemper" class="w-full h-64 object-cover"/>
-          <div class="p-6">
-            <h3 class="font-monument text-xl text-[#094946] mb-2">Distemper</h3>
-            <p class="text-gray-600 mb-4">Economic wall coating with good coverage</p>
-            <button onclick="openModal('distemper')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
-              View Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Primer -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
-          <img src="./Products/Primer/1.png" alt="Primer" class="w-full h-64 object-cover"/>
-          <div class="p-6">
-            <h3 class="font-monument text-xl text-[#094946] mb-2">Primer</h3>
-            <p class="text-gray-600 mb-4">Essential base coat for perfect paint finish</p>
-            <button onclick="openModal('primer')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
-              View Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Putty -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
-          <img src="./Products/Putty/1.png" alt="Putty" class="w-full h-64 object-cover"/>
-          <div class="p-6">
-            <h3 class="font-monument text-xl text-[#094946] mb-2">Putty</h3>
-            <p class="text-gray-600 mb-4">Wall surface preparation for smooth finish</p>
-            <button onclick="openModal('putty')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
-              View Details
-            </button>
-          </div>
-        </div>
-
-        <!-- Texture Paint -->
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2">
-          <img src="./Products/Texture/1.png" alt="Texture Paint" class="w-full h-64 object-cover"/>
-          <div class="p-6">
-            <h3 class="font-monument text-xl text-[#094946] mb-2">Texture Paint</h3>
-            <p class="text-gray-600 mb-4">Decorative textured finishes for unique walls</p>
-            <button onclick="openModal('texture')" class="bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-colors">
-              View Details
-            </button>
-          </div>
-        </div>
+    <div class="container mx-auto px-8 md:px-16 py-10">
+      <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Loading state will be shown here -->
       </div>
     </div>
 
-    <!-- Product Modal -->
-    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white rounded-2xl p-6 max-w-4xl w-[90%] max-h-[90vh] overflow-y-auto relative">
-        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        
-        <div id="modalContent" class="mt-4">
+    <!-- Enhanced Product Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl w-[90%] max-w-4xl max-h-[90vh] overflow-y-auto relative">
+        <!-- Modal Header -->
+        <div class="sticky top-0 bg-white px-8 py-4 border-b border-gray-100 rounded-t-2xl flex justify-between items-center">
+          <h2 class="font-monument text-2xl text-[#094946]">Product Details</h2>
+          <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-all duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Content -->
+        <div id="modalContent" class="p-8">
           <!-- Content will be dynamically inserted here -->
         </div>
 
-        <!-- Image Gallery -->
-        <div id="imageGallery" class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+        <!-- Modal Footer -->
+        <div id="imageGallery" class="px-8 pb-8">
           <!-- Images will be dynamically inserted here -->
         </div>
       </div>
@@ -358,6 +293,198 @@
           closeModal();
         }
       });
+    </script>
+
+    <script type="module">
+      import { getProducts } from './app.js';
+
+      // Add loading state HTML
+      function showLoading() {
+        const productsGrid = document.getElementById('productsGrid');
+        productsGrid.innerHTML = `
+          <div class="col-span-full flex items-center justify-center py-20">
+            <div class="animate-spin rounded-full h-12 w-12 border-4 border-[#0B6D66] border-t-transparent"></div>
+          </div>
+        `;
+      }
+
+      async function loadProducts() {
+        showLoading();
+        
+        try {
+          const result = await getProducts();
+          const productsGrid = document.getElementById('productsGrid');
+          
+          if (result.success && result.products.length > 0) {
+            productsGrid.innerHTML = result.products
+              .map(product => `
+                <div class="bg-white/90 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-[480px] flex flex-col">
+                    <div class="relative overflow-hidden h-[280px] bg-[#23A19810] flex items-center justify-center p-4">
+                    ${product.imageUrls && product.imageUrls.length > 0 
+                      ? `<img 
+                          src="${product.imageUrls[0]}" 
+                          alt="${product.name}" 
+                          class="w-full h-full object-contain transition-transform duration-500"
+                        />`
+                      : `<div class="w-full h-full flex items-center justify-center">
+                          <span class="text-gray-400">No image available</span>
+                         </div>`
+                    }
+                    ${product.imageUrls && product.imageUrls.length > 1 
+                      ? `<div class="absolute bottom-2 right-2 bg-white/80 backdrop-blur-sm rounded-full px-2 py-1 text-sm text-gray-600">
+                          +${product.imageUrls.length - 1} more
+                         </div>`
+                      : ''
+                    }
+                  </div>
+                    <div class="p-6 flex flex-col flex-grow bg-gradient-to-b from-[#23A19810] to-white">
+                        <div class="mb-auto">
+                            <h3 class="font-monument text-xl text-[#094946] mb-3 truncate" title="${product.name}">
+                                ${product.name}
+                            </h3>
+                            <p class="text-gray-600 mb-4 line-clamp-3 text-sm leading-relaxed" title="${product.description}">
+                                ${product.description}
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-[#23A19820]">
+                    <button 
+                      onclick="openModal('${product.id}')" 
+                                class="bg-[#0B6D66] text-white w-full py-3 rounded-lg hover:bg-[#094946] transition-all duration-300 font-medium text-sm tracking-wide flex items-center justify-center gap-2"
+                    >
+                      View Details
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                    </button>
+                    </div>
+                  </div>
+                </div>
+              `)
+              .join('');
+          } else if (result.success) {
+            productsGrid.innerHTML = `
+              <div class="col-span-full text-center py-20">
+                <p class="text-gray-600 text-lg">No products available at the moment.</p>
+              </div>
+            `;
+          } else {
+            throw new Error(result.error);
+          }
+        } catch (error) {
+          console.error('Error loading products:', error);
+          document.getElementById('productsGrid').innerHTML = `
+            <div class="col-span-full text-center py-20">
+              <div class="text-red-600 text-lg">Failed to load products. Please try again later.</div>
+              <button 
+                onclick="retryLoading()" 
+                class="mt-4 bg-[#0B6D66] text-white px-6 py-2 rounded-full hover:bg-[#094946] transition-all duration-300"
+              >
+                Retry
+              </button>
+            </div>
+          `;
+        }
+      }
+
+      // Add retry function
+      window.retryLoading = function() {
+        loadProducts();
+      };
+
+      // Enhanced modal function
+      window.openModal = async function(productId) {
+        const modal = document.getElementById('productModal');
+        const content = document.getElementById('modalContent');
+        
+        // Show loading in modal
+        content.innerHTML = `
+          <div class="flex items-center justify-center py-12">
+            <div class="animate-spin rounded-full h-12 w-12 border-4 border-[#0B6D66] border-t-transparent"></div>
+          </div>
+        `;
+        
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        try {
+          const result = await getProducts();
+          if (result.success) {
+            const product = result.products.find(p => p.id === productId);
+            if (product) {
+              content.innerHTML = `
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div class="space-y-6">
+                    <div>
+                      <h3 class="font-monument text-3xl text-[#094946] mb-2">${product.name}</h3>
+                      <div class="h-1 w-20 bg-[#0B6D66] rounded"></div>
+                    </div>
+                    
+                    <div class="prose max-w-none">
+                      <p class="text-gray-600 leading-relaxed text-lg">${product.description}</p>
+                    </div>
+                    
+                    <div class="pt-4 border-t border-gray-200">
+                      <div class="flex items-center text-gray-500">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span class="text-sm">
+                          Added: ${new Date(product.createdAt).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="space-y-4">
+                    ${product.imageUrls && product.imageUrls.length > 0 
+                        ? `<div class="rounded-xl overflow-hidden shadow-lg bg-gray-50 h-[400px] flex items-center justify-center">
+                            <img 
+                                src="${product.imageUrls[0]}" 
+                                alt="${product.name}" 
+                                class="max-w-full max-h-full object-contain p-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                                onclick="openFullImage('${product.imageUrls[0]}')"
+                            />
+                          </div>
+                          ${product.imageUrls.length > 1 
+                            ? `<div class="grid grid-cols-4 gap-2">
+                                ${product.imageUrls.slice(1).map(url => `
+                                    <div class="aspect-square rounded-lg overflow-hidden shadow-sm bg-gray-50">
+                                        <img 
+                                            src="${url}" 
+                                            alt="${product.name}" 
+                                            class="w-full h-full object-contain p-2 cursor-pointer hover:scale-105 transition-transform duration-300"
+                                            onclick="openFullImage('${url}')"
+                                        />
+                                    </div>
+                                `).join('')}
+                              </div>`
+                            : ''
+                          }`
+                        : `<div class="rounded-xl overflow-hidden shadow-lg bg-gray-50 h-[400px] flex items-center justify-center">
+                            <span class="text-gray-400">No image available</span>
+                          </div>`
+                    }
+                  </div>
+                </div>
+              `;
+            }
+          }
+        } catch (error) {
+          content.innerHTML = `
+            <div class="text-center py-10">
+              <p class="text-red-600">Failed to load product details. Please try again.</p>
+            </div>
+          `;
+        }
+      };
+
+      // Load products when the page loads
+      loadProducts();
     </script>
   </body>
 </html>
